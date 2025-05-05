@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Prabhav Kanneganti
+    </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: green;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            font-weight: bold;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-links a,
+        .nav-links li {
+            margin-left: 1em;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+        }
+
+        .nav-links a.active {
+            border-bottom: 2px solid white;
+        }
+
+        .media-section {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 3em;
+        }
+
+        .subtitle {
+            color: #cce3f5;
+            font-style: italic;
+        }
+
+        .media-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4em;
+            margin-top: 2em;
+        }
+
+        .media-gallery img {
+            width: 500px;
+            height: auto;
+            border-radius: 8px
+        }
+
+        .media-item {
+            text-align: center;
+        }
+
+        .media-item p {
+            margin-top: 0.5em;
+            font-size: 1.5em;
+        }
+
+        .articles {
+            background-color: green;
+            color: white;
+            padding: 2em;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        }
+
+        .article-card {
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .article-images {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+
+        article-images img {
+            width: 220px;
+            border-radius: 8px;
+        }
+
+        .video-gallery {
+            background-color: green;
+            padding: 3em 2em;
+            color: white;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2em;
+        }
+
+        .video-item {
+            text-align: center;
+        }
+
+        .video-item {
+            text-align: center;
+        }
+
+        .video-item iframe,
+        .video-item video {
+            width: 100%;
+            max-width: 560px;
+        }
+
+        .video-item p {
+            margin-top: 0.8em;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: steelblue;
+            color: white;
+            text-align: center;
+            padding: 2em;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        </style>
+</head>
+<body>
+    <header class="header">
+        <a href="HomePage.html" class="logo">Earth Day</a>
+        <nav class="nav-links">
+            <a href="ContributePage.html" class="active">How to Contribute</a>
+            <a href="Donate.html"><u>Donate</u></a>
+            <a href="API.html"><u>CO2</u></a>
+        </nav>
+    </header>
+    <section class="media-section">
+        <div class="media-gallery">
+            <div class="media-item">
+                <img src="Annual-co2.png" alt="">
+                <p>Carbon Emission by the Years Graph</p>
+        </div>
+            </section>
+                <section class="media-section">
+                    <div class="media-gallery">
+                        <div class="media-item">
+                            <img src="Pollution.png" alt="">
+                            <p>Pollution by Years Graph</p>
+                    </div>
+                        </section>
+                <header class="header">
+                    <a href="HomePage.html" class="logo">Earth Day</a>
+                    <nav class="nav-links">
+                        <a href="ContributePage.html" class="active">How to Contribute</a>
+                        <a href="Donate.html"><u>Donate</u></a>
+                        <a href="API.html"><u>CO2</u></a>
+                    </nav>
+                </header>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+ </head>
+ <body>
+    <script>
+    const data = null;
+ 
+ 
+    const xhr = new XMLHttpRequest();
+    let year = prompt("Please enter your year:");
+    let day = prompt("Please enter your day:");
+    let month = prompt("Please enter your month:");
+    xhr.addEventListener('readystatechange', function () {
+       
+        if (this.readyState === this.DONE) {
+            const data = (JSON.parse(this.responseText))
+            const x = (data.co2.filter(entry => (entry.day ===  String(day) && entry.month === String(month) && entry.year === String(year))));
+            alert("the CO2 PPM for that date was " + (x[0].cycle))
+        }
+    });
+ 
+ 
+    xhr.open('GET', 'https://daily-atmosphere-carbon-dioxide-concentration.p.rapidapi.com/api/co2-api');
+    xhr.setRequestHeader('x-rapidapi-key', '983c6daf7amsh0a3190372a97977p1a48a9jsnb6a9d4918ed2');
+    xhr.setRequestHeader('x-rapidapi-host', 'daily-atmosphere-carbon-dioxide-concentration.p.rapidapi.com');
+ 
+ 
+    xhr.send(data);
+    </script>
+ </body>
+</html>

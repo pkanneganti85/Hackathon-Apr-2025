@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Prabhav Kanneganti
+    </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(60, 196, 60);
+            color: lightblue;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            font-weight: bold;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: lightblue;
+        }
+
+        .nav-links a,
+        .nav-links li {
+            margin-left: 1em;
+            text-decoration: none;
+            font-weight: bold;
+            color: lightblue;
+            font-size: 20px;
+        }
+
+        .nav-links a.active {
+            border-bottom: 2px solid lightblue;
+        }
+
+        .media-section {
+            background-color: rgb(60, 196, 60);
+            color: white;
+            text-align: center;
+            padding: 3em;
+            font-size: 27px;
+        }
+
+        .subtitle {
+            color: #cce3f5;
+            font-style: italic;
+        }
+
+        .media-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4em;
+            margin-top: 2em;
+        }
+
+        .media-gallery img {
+            width: 500px;
+            height: auto;
+            border-radius: 8px
+        }
+
+        .media-item {
+            text-align: center;
+        }
+
+        .media-item p {
+            margin-top: 0.5em;
+            font-size: 1.5em;
+        }
+
+        .articles {
+            background-color: rgb(60, 196, 60);
+            color: lightblue;
+            padding: 2em;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        }
+
+        .article-card {
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .article-images {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+
+        article-images img {
+            width: 220px;
+            border-radius: 8px;
+        }
+
+        .video-gallery {
+            background-color: rgb(60, 196, 60);
+            padding: 3em 2em;
+            color: lightblue;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2em;
+        }
+
+        .video-item {
+            text-align: center;
+        }
+
+        .video-item {
+            text-align: center;
+        }
+
+        .video-item iframe,
+        .video-item video {
+            width: 100%;
+            max-width: 560px;
+        }
+
+        .video-item p {
+            margin-top: 0.8em;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: lightblue;
+            color: green;
+            text-align: center;
+            padding: 2em;
+        }
+
+        .footer a {
+            color: green;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="HomePage.html" class="logo">Earth Day</a>
+        <nav class="nav-links">
+            <a href="ContributePage.html"><u>How to Contribute</u></a>
+            <a href="Donate.html" class="active">Donate</a>
+            <a href="API.html"><u>CO2</u></a>
+        </nav>
+    </header>
+    <section class="media-section">
+        <h2 style="color: lightblue"><b>Donate</b></h2>
+        <p class="subtitle"><em>Another way to help!</em></p>
+        <div class="media-gallery">
+            <div class="media-item">
+                <img src="donate.png" alt="">
+                <p style="color: lightblue">Organizations to donate towards Earth Day!</p>
+                <p><a
+                        href="https://preserve.nature.org/page/168363/donate/1?ea.profile.id=32595&en_txn1=p_g.dfa.fd.earth25.dtd.nbr.envrnmnt.202504.X&supporter.appealCode=AHOMQ250401W1SXX01&en_txn8=NewSch.ADPCGO2504PDMZNZZD02Z06-NZUZZ-DGAQ&gad_source=1&gbraid=0AAAAAD-hzDZXxQFSm15tOA32uYcXtsYy8&gclid=Cj0KCQjwiLLABhCEARIsAJYS6ukOw5OCzzAxDhxR79gQPz3RYS_Y_87DKL7_daECEv-qDQjbBfW5FPIaAhCuEALw_wcB&gclsrc=aw.ds">The
+                        Nature Conservancy</a></p>
+                <p><a
+                        href="https://www.onepercentfortheplanet.org/donate-earth-day?utm_feeditemid=&utm_device=c&utm_term=earth%20day&utm_source=google&utm_medium=ppc&utm_campaign=NL_Earth+Day_Conversions-Donations&hsa_cam=22382805257&hsa_grp=179852666769&hsa_mt=b&hsa_src=g&hsa_ad=742126791765&hsa_acc=3137760693&hsa_net=adwords&hsa_kw=earth%20day&hsa_tgt=kwd-10705516&hsa_ver=3&gad_source=1&gbraid=0AAAAAqnql3OOy1oa627ynp0GyWKlKxnaf&gclid=Cj0KCQjwiLLABhCEARIsAJYS6uk1uyWxhCGZT7VVQrH6OlC2Mkb7lgOkCKlgPYllC5sSKIVlPvwFq50aAl56EALw_wcB">1%
+                        For the Planet</a></p>
+                <p><a
+                        href="https://give.nationalgeographic.org/page/167745/donate/1?ea.tracking.id=DB254I&utm_campaign=April2025&utm_content=eApp&utm_medium=email&utm_source=ngs&en_txn6=DB254I&en_txn7=XXGXI&gad_source=1&gbraid=0AAAAADLd0XBUPy0boulqI8rl2h0JZ3Moy&gclid=Cj0KCQjwiLLABhCEARIsAJYS6ul8Ll5Ch5TGsEK-RdzDd9kGJ_xAm89J0wV-0is8YhhZuVzbjPqwee0aAghOEALw_wcB&gclsrc=aw.ds">National
+                        Geographic</a></p>
+                <p><a href="https://www.earthday.org/donate/">Earth Day</a></p>
+                <p><a href="https://protect.worldwildlife.org/page/80685/donate/1">World Wildlife Fund</a></p>
+            </div>
+    </section>
+    <footer class="footer">
+        <p><b>Video on Earth Day</b></p>
+        <p><i>Earth Day: How it started and why it matters | CBC Kids News</i></p>
+        <iframe width="280" height="159" src="https://www.youtube.com/embed/qXK-2U9NylE"
+            title="Youtube Video Player"></iframe>
+    </footer>
+</body>
+
+</html>
